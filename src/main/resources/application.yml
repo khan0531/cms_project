@@ -1,14 +1,14 @@
 server:
-  port: ${PORT.NO:8080}
+  port: ${PORT_NO:8080}
 spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
   datasource:
-    url: jdbc:mysql://${YOUR_HOST:localhost}:3306/${YOUR_DB_NAME:zeroorder}?useSSL=false&userUnicode=true&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://${YOUR_HOST:localhost}:3306/${YOUR_DB_NAME:db}?useSSL=false&userUnicode=true&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: ${YOUR_ID:root}
-    password: ${YOUR_PASSWORD:7845120qwe}
+    username: ${YOUR_ID:id}
+    password: ${YOUR_PASSWORD:your_password}
   jpa:
     show-sql: true
     hibernate:
