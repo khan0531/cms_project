@@ -10,11 +10,11 @@ import org.springframework.http.client.support.BasicAuthenticationInterceptor;
 public class FeignConfig {
 
   @Value("${mailgun.api.key}")
-  private String mailgunApiKey;
+  private String MAILGUN_API_KEY;
 
   @Qualifier(value = "mailgun")
   @Bean
   public BasicAuthenticationInterceptor basicAuthenticationInterceptor() {
-    return new BasicAuthenticationInterceptor("api", mailgunApiKey);
+    return new BasicAuthenticationInterceptor("api", MAILGUN_API_KEY);
   }
 }

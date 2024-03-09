@@ -23,3 +23,4 @@ feign:
 mailgun:
   api:
     key: ${MAILGUN_API_KEY:your_mailgun_api_key}
+  email: ${MAILGUN_EMAIL:your_mailgun_email}
