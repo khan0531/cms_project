@@ -28,7 +28,7 @@ public class CustomerController {
   private final CustomerService customerService;
   private final CustomerBalanceService customerBalanceService;
 
-  @GetMapping("/gerInfo")
+  @GetMapping("/getInfo")
   public ResponseEntity<CustomerDto> getInfo(@RequestHeader("X-AUTH-TOKEN") String token) {
     UserVo vo = provider.getUserVo(token);
     Customer c = customerService.findByIdAndEmail(vo.getId(), vo.getEmail())
