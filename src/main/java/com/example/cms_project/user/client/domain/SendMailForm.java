@@ -1,4 +1,4 @@
-package com.example.cms_project.user.client.mailgun;
+package com.example.cms_project.user.client.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
