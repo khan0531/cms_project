@@ -30,4 +30,4 @@ jwt:
   expiration: ${JWT_EXPIRATION:86400000}
 
 aes:
-    secret: ${AES_SECRET:your_aes_secret}
+    secret: ${AES_SECRET:zerobasekeyiszeobasekey}
