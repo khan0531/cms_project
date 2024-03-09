@@ -40,5 +40,22 @@ X-AUTH-TOKEN: ${token}
 ################################
 
 ### 회원 가입 ( 셀러 )
+POST https://localhost:8080/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "2000-01-01",
+  "email": "test@test.com",
+  "name": "홍길동",
+  "password": "1234",
+  "phone": "010-1234-5678"
+}
 
 ### 로그인 ( 셀러 )
+POST https://localhost:8080/signin/seller
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "1234"
+}
