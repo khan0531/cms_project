@@ -62,8 +62,5 @@ public class SignUpApplication {
         .append(email)
         .append("&code=")
         .append(code).toString();
-
   }
-
-
 }
