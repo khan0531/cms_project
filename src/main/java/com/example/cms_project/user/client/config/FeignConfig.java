@@ -1,4 +1,4 @@
-package com.example.cms_project.user.config;
+package com.example.cms_project.user.client.config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;

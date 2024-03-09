@@ -1,4 +1,4 @@
-package com.example.cms_project.user.config;
+package com.example.cms_project.user.client.config;
 
 import com.example.cms_project.user.client.security.JwtAuthenticationProvider;
 import org.springframework.context.annotation.Bean;
