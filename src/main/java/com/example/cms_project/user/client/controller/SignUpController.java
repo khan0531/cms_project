@@ -22,7 +22,7 @@ public class SignUpController {
     return ResponseEntity.ok(signUpApplication.customerSignUp(form));
   }
 
-  @PutMapping("/verify")
+  @PutMapping("/verify/customer")
   public ResponseEntity<String> verifyCustomer(String email, String code) {
     signUpApplication.customerVerify(email, code);
     return ResponseEntity.ok("인증이 완료 되었습니다.");

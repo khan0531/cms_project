@@ -1,5 +1,10 @@
 package com.example.cms_project.user.client.service;
 
+import static com.example.cms_project.user.client.exception.ErrorCode.ALREADY_VERIFY;
+import static com.example.cms_project.user.client.exception.ErrorCode.EXPIRED_CODE;
+import static com.example.cms_project.user.client.exception.ErrorCode.NOT_FOUND_USER;
+import static com.example.cms_project.user.client.exception.ErrorCode.WRONG_VERIFICATION;
+
 import com.example.cms_project.user.client.domain.SignUpForm;
 import com.example.cms_project.user.client.exception.CustomException;
 import com.example.cms_project.user.client.exception.ErrorCode;
@@ -29,16 +34,16 @@ public class SignUpCustomerService {
   @Transactional
   public void verifyEmail(String email, String code) {
     Customer customer = customerRepository.findByEmail(email)
-        .orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUND_USER));
+        .orElseThrow(() -> new CustomException(NOT_FOUND_USER));
 
     if(customer.isVerify()) {
-      throw new CustomException(ErrorCode.ALREADY_VERIFY);
+      throw new CustomException(ALREADY_VERIFY);
     }
     if(!customer.getVerificationCode().equals(code)) {
-      throw new CustomException(ErrorCode.WRONG_VERIFICATION);
+      throw new CustomException(WRONG_VERIFICATION);
     }
     if(customer.getVerifyExpiredAt().isBefore(LocalDateTime.now())) {
-      throw new CustomException(ErrorCode.EXPIRED_CODE);
+      throw new CustomException(EXPIRED_CODE);
     }
     customer.setVerify(true);
   }
@@ -53,6 +58,6 @@ public class SignUpCustomerService {
       customer.setVerifyExpiredAt(LocalDateTime.now().plusDays(1));
       return customer.getVerifyExpiredAt();
     }
-    throw new CustomException(ErrorCode.NOT_FOUND_USER);
+    throw new CustomException(NOT_FOUND_USER);
   }
 }
