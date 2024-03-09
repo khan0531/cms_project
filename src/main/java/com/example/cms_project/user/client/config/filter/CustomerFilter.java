@@ -2,7 +2,7 @@ package com.example.cms_project.user.client.config.filter;
 
 import com.example.cms_project.user.client.domain.UserVo;
 import com.example.cms_project.user.client.security.JwtAuthenticationProvider;
-import com.example.cms_project.user.client.service.customer.CustomerService;
+import com.example.cms_project.user.client.application.service.customer.CustomerService;
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;

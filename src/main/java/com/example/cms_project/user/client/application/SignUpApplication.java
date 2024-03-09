@@ -5,12 +5,11 @@ import static com.example.cms_project.user.client.exception.ErrorCode.ALREADY_RE
 import com.example.cms_project.user.client.domain.SendMailForm;
 import com.example.cms_project.user.client.domain.SignUpForm;
 import com.example.cms_project.user.client.exception.CustomException;
-import com.example.cms_project.user.client.exception.ErrorCode;
 import com.example.cms_project.user.client.mailgun.MailgunClient;
 import com.example.cms_project.user.client.model.Customer;
 import com.example.cms_project.user.client.model.Seller;
-import com.example.cms_project.user.client.service.customer.SignUpCustomerService;
-import com.example.cms_project.user.client.service.seller.SellerService;
+import com.example.cms_project.user.client.application.service.customer.SignUpCustomerService;
+import com.example.cms_project.user.client.application.service.seller.SellerService;
 import java.time.LocalDateTime;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -14,7 +14,10 @@ public enum ErrorCode {
   EXPIRED_CODE(HttpStatus.BAD_REQUEST, "만료된 인증 코드입니다."),
 
   //login
-  LOGIN_CHECK_FAIL(HttpStatus.BAD_REQUEST, "로그인 정보를 확인해주세요.");
+  LOGIN_CHECK_FAIL(HttpStatus.BAD_REQUEST, "로그인 정보를 확인해주세요."),
+
+  //balance
+  NOT_ENOUGH_BALANCE(HttpStatus.BAD_REQUEST, "잔액이 부족합니다."),;
 
   private final HttpStatus httpStatus;
   private final String detail;

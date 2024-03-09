@@ -1,4 +1,4 @@
-package com.example.cms_project.user.client.service.customer;
+package com.example.cms_project.user.client.application.service.customer;
 
 import com.example.cms_project.user.client.model.Customer;
 import com.example.cms_project.user.client.repository.CustomerRepository;

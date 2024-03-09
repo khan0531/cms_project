@@ -1,4 +1,4 @@
-package com.example.cms_project.user.client.service.customer;
+package com.example.cms_project.user.client.application.service.customer;
 
 import static com.example.cms_project.user.client.exception.ErrorCode.ALREADY_VERIFY;
 import static com.example.cms_project.user.client.exception.ErrorCode.EXPIRED_CODE;
@@ -13,7 +13,7 @@ import com.example.cms_project.user.client.repository.CustomerRepository;
 import java.time.LocalDateTime;
 import java.util.Locale;
 import java.util.Optional;
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

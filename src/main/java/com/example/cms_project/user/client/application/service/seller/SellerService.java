@@ -1,4 +1,4 @@
-package com.example.cms_project.user.client.service.seller;
+package com.example.cms_project.user.client.application.service.seller;
 
 import static com.example.cms_project.user.client.exception.ErrorCode.ALREADY_VERIFY;
 import static com.example.cms_project.user.client.exception.ErrorCode.EXPIRED_CODE;
@@ -12,7 +12,7 @@ import com.example.cms_project.user.client.model.Seller;
 import com.example.cms_project.user.client.repository.SellerRepository;
 import java.time.LocalDateTime;
 import java.util.Optional;
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,39 +20,40 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class SellerService {
 
-    private final SellerRepository sellerRepository;
+  private final SellerRepository sellerRepository;
 
-    public Optional<Seller> findByIdAndEmail(Long id, String email) {
-        return sellerRepository.findByIdAndEmail(id, email);
-    }
+  public Optional<Seller> findByIdAndEmail(Long id, String email) {
+      return sellerRepository.findByIdAndEmail(id, email);
+  }
 
-    public Optional<Seller> findValidSeller(String email, String password) {
-        return sellerRepository.findByEmailAndPasswordAndVerifyIsTrue(email, password);
-    }
-    
-    public Seller signUp(SignUpForm form) {
-        return sellerRepository.save(Seller.from(form));
-    }
-    
-    public boolean isEmailExist(String email) {
-        return sellerRepository.findByEmail(email).isPresent();
-    }
-    
-    public void verifyEmail(String email, String code) {
-        Seller seller = sellerRepository.findByEmail(email)
-                .orElseThrow(() -> new CustomException(NOT_FOUND_USER));
+  public Optional<Seller> findValidSeller(String email, String password) {
+      return sellerRepository.findByEmailAndPasswordAndVerifyIsTrue(email, password);
+  }
 
-        if (seller.isVerify()) {
-            throw new CustomException(ALREADY_VERIFY);
-        }
-        if (!seller.getVerificationCode().equals(code)) {
-            throw new CustomException(WRONG_VERIFICATION);
-        }
-        if (seller.getVerifyExpiredAt().isBefore(LocalDateTime.now())) {
-            throw new CustomException(EXPIRED_CODE);
-        }
-        seller.setVerify(true);
+  public Seller signUp(SignUpForm form) {
+      return sellerRepository.save(Seller.from(form));
+  }
+
+  public boolean isEmailExist(String email) {
+      return sellerRepository.findByEmail(email).isPresent();
+  }
+
+  @Transactional
+  public void verifyEmail(String email, String code) {
+    Seller seller = sellerRepository.findByEmail(email)
+            .orElseThrow(() -> new CustomException(NOT_FOUND_USER));
+
+    if (seller.isVerify()) {
+        throw new CustomException(ALREADY_VERIFY);
     }
+    if (!seller.getVerificationCode().equals(code)) {
+        throw new CustomException(WRONG_VERIFICATION);
+    }
+    if (seller.getVerifyExpiredAt().isBefore(LocalDateTime.now())) {
+        throw new CustomException(EXPIRED_CODE);
+    }
+    seller.setVerify(true);
+  }
 
   @Transactional
   public LocalDateTime changeSellerValidateEmail(Long customerId, String verificationCode) {
