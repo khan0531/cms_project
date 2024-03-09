@@ -24,3 +24,7 @@ mailgun:
   api:
     key: ${MAILGUN_API_KEY:your_mailgun_api_key}
   email: ${MAILGUN_EMAIL:your_mailgun_email}
+
+jwt:
+  secret: ${JWT_SECRET:your_jwt_secret}
+  expiration: ${JWT_EXPIRATION:86400000}
