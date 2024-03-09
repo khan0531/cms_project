@@ -1,6 +1,7 @@
 package com.example.cms_project.user.client.security;
 
 import com.example.cms_project.user.client.domain.UserVo;
+import com.example.cms_project.user.client.domain.type.UserType;
 import com.example.cms_project.user.client.util.Aes256Util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
@@ -8,7 +9,6 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import java.util.Date;
 import java.util.Objects;
-import org.hibernate.usertype.UserType;
 import org.springframework.beans.factory.annotation.Value;
 
 public class JwtAuthenticationProvider {
@@ -19,7 +19,7 @@ public class JwtAuthenticationProvider {
   @Value("${jwt.expiration}")
   private long JWT_EXPIRATION;
 
-  private String createToken(String userPk, Long id, UserType userType) {
+  public String createToken(String userPk, Long id, UserType userType) {
     Claims claims = Jwts.claims().setSubject(Aes256Util.encrypt(userPk)).setId(id.toString());
     claims.put("role", userType);
     Date now = new Date();
