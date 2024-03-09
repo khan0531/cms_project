@@ -28,3 +28,6 @@ mailgun:
 jwt:
   secret: ${JWT_SECRET:your_jwt_secret}
   expiration: ${JWT_EXPIRATION:86400000}
+
+aes:
+    secret: ${AES_SECRET:your_aes_secret}
