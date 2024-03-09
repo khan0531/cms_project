@@ -1,4 +1,4 @@
-package com.example.cms_project.user.client.service;
+package com.example.cms_project.user.client.mailgun.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
