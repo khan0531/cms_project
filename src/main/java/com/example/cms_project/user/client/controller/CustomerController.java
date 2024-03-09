@@ -5,10 +5,9 @@ import static com.example.cms_project.user.client.exception.ErrorCode.NOT_FOUND_
 import com.example.cms_project.user.client.domain.CustomerDto;
 import com.example.cms_project.user.client.domain.UserVo;
 import com.example.cms_project.user.client.exception.CustomException;
-import com.example.cms_project.user.client.exception.ErrorCode;
 import com.example.cms_project.user.client.model.Customer;
 import com.example.cms_project.user.client.security.JwtAuthenticationProvider;
-import com.example.cms_project.user.client.service.CustomerService;
+import com.example.cms_project.user.client.service.customer.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

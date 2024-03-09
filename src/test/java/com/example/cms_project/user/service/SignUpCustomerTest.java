@@ -2,7 +2,7 @@ package com.example.cms_project.user.service;
 
 import com.example.cms_project.user.client.domain.SignUpForm;
 import com.example.cms_project.user.client.model.Customer;
-import com.example.cms_project.user.client.service.SignUpCustomerService;
+import com.example.cms_project.user.client.service.customer.SignUpCustomerService;
 import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

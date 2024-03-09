@@ -1,4 +1,4 @@
-package com.example.cms_project.user.client.service;
+package com.example.cms_project.user.client.service.customer;
 
 import static com.example.cms_project.user.client.exception.ErrorCode.ALREADY_VERIFY;
 import static com.example.cms_project.user.client.exception.ErrorCode.EXPIRED_CODE;
