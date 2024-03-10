@@ -1,12 +1,12 @@
 package com.example.cms_project.user.client.controller;
 
-import static com.example.cms_project.user.client.exception.ErrorCode.NOT_FOUND_USER;
+import static com.example.cms_project.common.exception.ErrorCode.NOT_FOUND_USER;
 
 import com.example.cms_project.user.client.application.service.customer.CustomerBalanceService;
 import com.example.cms_project.user.client.domain.ChangeBalanceForm;
 import com.example.cms_project.user.client.domain.CustomerDto;
 import com.example.cms_project.user.client.domain.UserVo;
-import com.example.cms_project.user.client.exception.CustomException;
+import com.example.cms_project.common.exception.CustomException;
 import com.example.cms_project.user.client.entity.Customer;
 import com.example.cms_project.user.client.security.JwtAuthenticationProvider;
 import com.example.cms_project.user.client.application.service.customer.CustomerService;

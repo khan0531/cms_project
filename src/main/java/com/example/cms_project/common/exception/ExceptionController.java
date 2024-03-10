@@ -1,6 +1,5 @@
-package com.example.cms_project.user.client.exception;
+package com.example.cms_project.common.exception;
 
-import javax.servlet.ServletException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;

@@ -1,10 +1,10 @@
 package com.example.cms_project.user.client.application;
 
-import static com.example.cms_project.user.client.exception.ErrorCode.ALREADY_REGISTER_USER;
+import static com.example.cms_project.common.exception.ErrorCode.ALREADY_REGISTER_USER;
 
 import com.example.cms_project.user.client.domain.SendMailForm;
 import com.example.cms_project.user.client.domain.SignUpForm;
-import com.example.cms_project.user.client.exception.CustomException;
+import com.example.cms_project.common.exception.CustomException;
 import com.example.cms_project.user.client.mailgun.MailgunClient;
 import com.example.cms_project.user.client.entity.Customer;
 import com.example.cms_project.user.client.entity.Seller;

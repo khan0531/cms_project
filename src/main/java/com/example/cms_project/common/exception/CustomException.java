@@ -1,4 +1,4 @@
-package com.example.cms_project.order.exception;
+package com.example.cms_project.common.exception;
 
 import lombok.Getter;
 

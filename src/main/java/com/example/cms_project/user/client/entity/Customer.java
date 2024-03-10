@@ -1,5 +1,6 @@
 package com.example.cms_project.user.client.entity;
 
+import com.example.cms_project.common.entity.BaseEntity;
 import com.example.cms_project.user.client.domain.SignUpForm;
 import java.time.LocalDate;
 import java.time.LocalDateTime;

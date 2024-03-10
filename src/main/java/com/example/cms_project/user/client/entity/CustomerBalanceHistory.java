@@ -1,5 +1,6 @@
 package com.example.cms_project.user.client.entity;
 
+import com.example.cms_project.common.entity.BaseEntity;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.example.cms_project.user.client.exception;
+package com.example.cms_project.common.exception;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,10 @@ public enum ErrorCode {
   LOGIN_CHECK_FAIL(HttpStatus.BAD_REQUEST, "로그인 정보를 확인해주세요."),
 
   //balance
-  NOT_ENOUGH_BALANCE(HttpStatus.BAD_REQUEST, "잔액이 부족합니다."),;
+  NOT_ENOUGH_BALANCE(HttpStatus.BAD_REQUEST, "잔액이 부족합니다."),
+
+  //order
+  ORDER_NOT_FOUND(HttpStatus.NOT_FOUND, "주문을 찾을 수 없습니다.");
 
   private final HttpStatus httpStatus;
   private final String detail;

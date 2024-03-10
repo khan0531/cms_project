@@ -1,12 +1,12 @@
 package com.example.cms_project.user.client.application.service.customer;
 
-import static com.example.cms_project.user.client.exception.ErrorCode.ALREADY_VERIFY;
-import static com.example.cms_project.user.client.exception.ErrorCode.EXPIRED_CODE;
-import static com.example.cms_project.user.client.exception.ErrorCode.NOT_FOUND_USER;
-import static com.example.cms_project.user.client.exception.ErrorCode.WRONG_VERIFICATION;
+import static com.example.cms_project.common.exception.ErrorCode.ALREADY_VERIFY;
+import static com.example.cms_project.common.exception.ErrorCode.EXPIRED_CODE;
+import static com.example.cms_project.common.exception.ErrorCode.NOT_FOUND_USER;
+import static com.example.cms_project.common.exception.ErrorCode.WRONG_VERIFICATION;
 
 import com.example.cms_project.user.client.domain.SignUpForm;
-import com.example.cms_project.user.client.exception.CustomException;
+import com.example.cms_project.common.exception.CustomException;
 import com.example.cms_project.user.client.entity.Customer;
 import com.example.cms_project.user.client.repository.CustomerRepository;
 import java.time.LocalDateTime;

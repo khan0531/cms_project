@@ -1,10 +1,10 @@
 package com.example.cms_project.user.client.application.service.customer;
 
-import static com.example.cms_project.user.client.exception.ErrorCode.NOT_ENOUGH_BALANCE;
-import static com.example.cms_project.user.client.exception.ErrorCode.NOT_FOUND_USER;
+import static com.example.cms_project.common.exception.ErrorCode.NOT_ENOUGH_BALANCE;
+import static com.example.cms_project.common.exception.ErrorCode.NOT_FOUND_USER;
 
 import com.example.cms_project.user.client.domain.ChangeBalanceForm;
-import com.example.cms_project.user.client.exception.CustomException;
+import com.example.cms_project.common.exception.CustomException;
 import com.example.cms_project.user.client.entity.CustomerBalanceHistory;
 import com.example.cms_project.user.client.repository.CustomerBalanceHistoryRepository;
 import com.example.cms_project.user.client.repository.CustomerRepository;

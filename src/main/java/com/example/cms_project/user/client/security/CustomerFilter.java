@@ -1,4 +1,4 @@
-package com.example.cms_project.user.client.config.filter;
+package com.example.cms_project.user.client.security;
 
 import com.example.cms_project.user.client.domain.UserVo;
 import com.example.cms_project.user.client.security.JwtAuthenticationProvider;

@@ -1,10 +1,10 @@
 package com.example.cms_project.user.client.application;
 
-import static com.example.cms_project.user.client.exception.ErrorCode.LOGIN_CHECK_FAIL;
+import static com.example.cms_project.common.exception.ErrorCode.LOGIN_CHECK_FAIL;
 
 import com.example.cms_project.user.client.domain.SignInForm;
 import com.example.cms_project.user.client.domain.type.UserType;
-import com.example.cms_project.user.client.exception.CustomException;
+import com.example.cms_project.common.exception.CustomException;
 import com.example.cms_project.user.client.entity.Customer;
 import com.example.cms_project.user.client.entity.Seller;
 import com.example.cms_project.user.client.security.JwtAuthenticationProvider;
