@@ -41,7 +41,7 @@ public class Product extends BaseEntity {
 
   private String description;
 
-  @OneToMany(cascade = CascadeType.ALL)
+  @OneToMany(cascade = CascadeType.ALL) // Product가 삭제되면 ProductItem도 삭제
   @JoinColumn(name = "product_id")
   private List<ProductItem> productItems = new ArrayList<>();
 

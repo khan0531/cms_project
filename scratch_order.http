@@ -59,5 +59,17 @@ X-AUTH-TOKEN: ${token}
   "price": 10000
 }
 
+### 상품 삭제 ( 셀러 )
+DELETE https://localhost:8080/seller/product?id=1
+Content-Type: application/json
+X-AUTH-TOKEN: ${token}
+
+
+### 상품 아이템 삭제 ( 셀러 )
+DELETE https://localhost:8080/seller/product/item?id=1
+Content-Type: application/json
+X-AUTH-TOKEN: ${token}
+
+
 
 

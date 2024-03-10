@@ -40,7 +40,7 @@ public class ProductItem extends BaseEntity{
   @Audited
   private Integer count; // 재고
 
-  @ManyToOne(cascade = CascadeType.ALL) // ProductItem이 삭제되면 Product도 삭제
+  @ManyToOne
   @JoinColumn(name = "product_id")
   private Product product;
 
