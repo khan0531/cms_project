@@ -1,0 +1,18 @@
+### 상품 등록 ( 셀러 )
+POST https://localhost:8080/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: ${token}
+
+{
+  "description": "테스트 상품입니다.",
+  "name": "테스트 상품",
+  "items": [
+    {
+      "count": 2,
+      "name": "테스트 상품 아이템",
+      "price": 10000
+    }
+  ]
+}
+
+

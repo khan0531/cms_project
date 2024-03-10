@@ -37,7 +37,6 @@ X-AUTH-TOKEN: ${token}
   "message": "돈 충전",
   "money": 10000
 }
-################################
 
 ### 회원 가입 ( 셀러 )
 POST https://localhost:8080/signup/seller
@@ -51,6 +50,9 @@ Content-Type: application/json
   "phone": "010-1234-5678"
 }
 
+### 이메일 인증 ( 셀러 )
+GET https://localhost:8080/signup/seller/verify?email=${email}&code=${code}
+
 ### 로그인 ( 셀러 )
 POST https://localhost:8080/signin/seller
 Content-Type: application/json
@@ -59,3 +61,5 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "1234"
 }
+
+
