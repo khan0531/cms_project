@@ -22,6 +22,7 @@ public enum ErrorCode {
   //order
   ORDER_NOT_FOUND(HttpStatus.BAD_REQUEST, "주문을 찾을 수 없습니다."),
   NOT_FOUND_PRODUCT(HttpStatus.BAD_REQUEST, "상품을 찾을 수 없습니다."),
+  NOT_FOUND_ITEM(HttpStatus.BAD_REQUEST, "상품을 찾을 수 없습니다."),
   SAME_ITEM_NAME(HttpStatus.BAD_REQUEST, "같은 이름의 상품이 이미 존재합니다."),;
 
   private final HttpStatus httpStatus;

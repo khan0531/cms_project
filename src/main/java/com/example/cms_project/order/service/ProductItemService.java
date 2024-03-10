@@ -1,9 +1,11 @@
 package com.example.cms_project.order.service;
 
+import static com.example.cms_project.common.exception.ErrorCode.NOT_FOUND_ITEM;
 import static com.example.cms_project.common.exception.ErrorCode.NOT_FOUND_PRODUCT;
 
 import com.example.cms_project.common.exception.CustomException;
 import com.example.cms_project.order.domain.product.AddProductItemForm;
+import com.example.cms_project.order.domain.product.UpdateProductItemForm;
 import com.example.cms_project.order.entity.Product;
 import com.example.cms_project.order.entity.ProductItem;
 import com.example.cms_project.order.repository.ProductItemRepository;
@@ -34,5 +36,16 @@ public class ProductItemService {
     product.getProductItems().add(productItem);
 
     return product;
+  }
+
+  @Transactional
+  public ProductItem updateProductItem(Long sellerId, UpdateProductItemForm form) {
+    ProductItem productItem = productItemRepository.findById(form.getId())
+        .filter(pi -> pi.getSellerId().equals(sellerId)).orElseThrow(() -> new CustomException(NOT_FOUND_ITEM));
+
+    productItem.setName(form.getName());
+    productItem.setPrice(form.getPrice());
+    productItem.setCount(form.getCount());
+    return productItem;
   }
 }

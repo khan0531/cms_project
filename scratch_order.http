@@ -27,5 +27,37 @@ X-AUTH-TOKEN: ${token}
   "price": 10000
 }
 
+### 상품 수정 ( 셀러 )
+PUT https://localhost:8080/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: ${token}
+
+{
+  "description": "테스트 상품입니다.",
+  "name": "테스트 상품 수정",
+  "id": 1,
+  "items": [
+    {
+      "id": 1,
+      "count": 2,
+      "name": "테스트 상품 아이템 수정",
+      "price": 10000
+    }
+  ]
+}
+
+### 상품 아이템 수정 ( 셀러 )
+PUT https://localhost:8080/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: ${token}
+
+{
+  "id": 1,
+  "productId": 1,
+  "count": 2,
+  "name": "테스트 상품 아이템",
+  "price": 10000
+}
+
 
 
