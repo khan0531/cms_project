@@ -5,8 +5,7 @@ import static com.example.cms_project.user.client.exception.ErrorCode.NOT_FOUND_
 
 import com.example.cms_project.user.client.domain.ChangeBalanceForm;
 import com.example.cms_project.user.client.exception.CustomException;
-import com.example.cms_project.user.client.exception.ErrorCode;
-import com.example.cms_project.user.client.model.CustomerBalanceHistory;
+import com.example.cms_project.user.client.entity.CustomerBalanceHistory;
 import com.example.cms_project.user.client.repository.CustomerBalanceHistoryRepository;
 import com.example.cms_project.user.client.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;

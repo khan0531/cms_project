@@ -7,8 +7,7 @@ import static com.example.cms_project.user.client.exception.ErrorCode.WRONG_VERI
 
 import com.example.cms_project.user.client.domain.SignUpForm;
 import com.example.cms_project.user.client.exception.CustomException;
-import com.example.cms_project.user.client.model.Customer;
-import com.example.cms_project.user.client.model.Seller;
+import com.example.cms_project.user.client.entity.Seller;
 import com.example.cms_project.user.client.repository.SellerRepository;
 import java.time.LocalDateTime;
 import java.util.Optional;

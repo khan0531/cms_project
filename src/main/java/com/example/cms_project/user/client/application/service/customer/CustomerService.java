@@ -1,6 +1,6 @@
 package com.example.cms_project.user.client.application.service.customer;
 
-import com.example.cms_project.user.client.model.Customer;
+import com.example.cms_project.user.client.entity.Customer;
 import com.example.cms_project.user.client.repository.CustomerRepository;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;

@@ -7,7 +7,7 @@ import com.example.cms_project.user.client.domain.ChangeBalanceForm;
 import com.example.cms_project.user.client.domain.CustomerDto;
 import com.example.cms_project.user.client.domain.UserVo;
 import com.example.cms_project.user.client.exception.CustomException;
-import com.example.cms_project.user.client.model.Customer;
+import com.example.cms_project.user.client.entity.Customer;
 import com.example.cms_project.user.client.security.JwtAuthenticationProvider;
 import com.example.cms_project.user.client.application.service.customer.CustomerService;
 import lombok.RequiredArgsConstructor;

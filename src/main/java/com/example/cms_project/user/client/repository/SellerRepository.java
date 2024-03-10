@@ -1,6 +1,6 @@
 package com.example.cms_project.user.client.repository;
 
-import com.example.cms_project.user.client.model.Seller;
+import com.example.cms_project.user.client.entity.Seller;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 

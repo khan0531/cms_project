@@ -1,7 +1,7 @@
 package com.example.cms_project.user.service;
 
 import com.example.cms_project.user.client.domain.SignUpForm;
-import com.example.cms_project.user.client.model.Customer;
+import com.example.cms_project.user.client.entity.Customer;
 import com.example.cms_project.user.client.application.service.customer.SignUpCustomerService;
 import java.time.LocalDate;
 import org.junit.jupiter.api.Test;

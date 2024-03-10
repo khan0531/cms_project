@@ -1,4 +1,4 @@
-package com.example.cms_project.user.client.model;
+package com.example.cms_project.user.client.entity;
 
 import java.time.LocalDateTime;
 import javax.persistence.EntityListeners;

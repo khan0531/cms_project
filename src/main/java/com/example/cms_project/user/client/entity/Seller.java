@@ -1,4 +1,4 @@
-package com.example.cms_project.user.client.model;
+package com.example.cms_project.user.client.entity;
 
 import com.example.cms_project.user.client.domain.SignUpForm;
 import java.time.LocalDate;

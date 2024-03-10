@@ -1,6 +1,6 @@
 package com.example.cms_project.user.client.domain;
 
-import com.example.cms_project.user.client.model.Customer;
+import com.example.cms_project.user.client.entity.Customer;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

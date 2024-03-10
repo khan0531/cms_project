@@ -5,8 +5,8 @@ import static com.example.cms_project.user.client.exception.ErrorCode.LOGIN_CHEC
 import com.example.cms_project.user.client.domain.SignInForm;
 import com.example.cms_project.user.client.domain.type.UserType;
 import com.example.cms_project.user.client.exception.CustomException;
-import com.example.cms_project.user.client.model.Customer;
-import com.example.cms_project.user.client.model.Seller;
+import com.example.cms_project.user.client.entity.Customer;
+import com.example.cms_project.user.client.entity.Seller;
 import com.example.cms_project.user.client.security.JwtAuthenticationProvider;
 import com.example.cms_project.user.client.application.service.customer.CustomerService;
 import com.example.cms_project.user.client.application.service.seller.SellerService;
