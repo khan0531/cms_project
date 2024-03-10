@@ -1,4 +1,4 @@
-package com.example.cms_project.order.service;
+package com.example.cms_project.order.application.service;
 
 import com.example.cms_project.common.exception.CustomException;
 import com.example.cms_project.common.exception.ErrorCode;

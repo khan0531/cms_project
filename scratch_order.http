@@ -80,5 +80,24 @@ GET https://localhost:8080/search/product/detail?productId=1
 Content-Type: application/json
 
 
+### 카트 추가
+### 상품 등록 ( 셀러 )
+POST https://localhost:8080/customer/cart
+Content-Type: application/json
+X-AUTH-TOKEN: ${token}
 
+{
+  "description": "테스트 상품입니다.",
+  "id": 1,
+  "items": [
+    {
+      "count": 1,
+      "id": 1,
+      "name": "테스트 상품 아이템",
+      "price": 10000
+    }
+  ],
+  "name": "테스트 상품",
+  "sellerId": 1
+}
 

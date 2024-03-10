@@ -1,8 +1,7 @@
 package com.example.cms_project.order.controller;
 
 import com.example.cms_project.order.domain.product.ProductDto;
-import com.example.cms_project.order.service.ProductSearchService;
-import com.example.cms_project.user.client.security.JwtAuthenticationProvider;
+import com.example.cms_project.order.application.service.ProductSearchService;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;

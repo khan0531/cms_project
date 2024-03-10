@@ -2,10 +2,10 @@ package com.example.cms_project.order.service;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import com.example.cms_project.order.application.service.ProductService;
 import com.example.cms_project.order.domain.product.AddProductForm;
 import com.example.cms_project.order.domain.product.AddProductItemForm;
 import com.example.cms_project.order.entity.Product;
-import com.example.cms_project.order.repository.ProductItemRepository;
 import com.example.cms_project.order.repository.ProductRepository;
 import java.util.ArrayList;
 import java.util.List;

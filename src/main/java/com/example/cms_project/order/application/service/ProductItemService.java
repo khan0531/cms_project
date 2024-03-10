@@ -1,4 +1,4 @@
-package com.example.cms_project.order.service;
+package com.example.cms_project.order.application.service;
 
 import static com.example.cms_project.common.exception.ErrorCode.NOT_FOUND_ITEM;
 import static com.example.cms_project.common.exception.ErrorCode.NOT_FOUND_PRODUCT;
