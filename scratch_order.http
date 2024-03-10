@@ -70,6 +70,15 @@ DELETE https://localhost:8080/seller/product/item?id=1
 Content-Type: application/json
 X-AUTH-TOKEN: ${token}
 
+### 상품 검색
+GET https://localhost:8080/search/product?name=테스트 상품
+Content-Type: application/json
+
+
+### 상품 디테일 검색 ( 셀러 )
+GET https://localhost:8080/search/product/detail?productId=1
+Content-Type: application/json
+
 
 
 
