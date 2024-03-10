@@ -32,6 +32,13 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.12.0'
     implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
 
+    // redis
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    testImplementation('it.ozimov:embedded-redis:0.7.3') {
+        exclude group: "org.slf4j", module: "slf4j-simple"
+    }
+    implementation 'io.lettuce:lettuce-core:6.2.6.RELEASE'
+
     testCompileOnly 'com.h2database:h2'
 
     compileOnly 'org.projectlombok:lombok'
