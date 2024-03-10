@@ -15,4 +15,17 @@ X-AUTH-TOKEN: ${token}
   ]
 }
 
+### 상품 아이템 등록 ( 셀러 )
+POST https://localhost:8080/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: ${token}
+
+{
+  "productId": 1,
+  "count": 2,
+  "name": "테스트 상품 아이템",
+  "price": 10000
+}
+
+
 
